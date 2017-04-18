@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HomeAutomation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,167 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qun-O4-a4D">
+                                <rect key="frame" x="10" y="20" width="172.5" height="145"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="plus-4-48.png" offImage="add-image-64.png" translatesAutoresizingMaskIntoConstraints="NO" id="Orq-KJ-Ett" customClass="RAMPaperSwitch" customModule="RAMPaperSwitch">
+                                        <rect key="frame" x="62" y="99" width="51" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="5Fb-ZI-vuL"/>
+                                            <constraint firstAttribute="height" constant="31" id="VhU-MV-zbd"/>
+                                        </constraints>
+                                        <color key="onTintColor" red="0.26845675706863403" green="0.75732952356338501" blue="0.98237496614456177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </switch>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightbulb-2-64-6.png" translatesAutoresizingMaskIntoConstraints="NO" id="TcE-JW-Nhn">
+                                        <rect key="frame" x="61.5" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="CCF-40-1RT"/>
+                                            <constraint firstAttribute="height" constant="50" id="jIq-I6-FOv"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Orq-KJ-Ett" firstAttribute="centerX" secondItem="Qun-O4-a4D" secondAttribute="centerX" id="SgF-bu-jck"/>
+                                    <constraint firstAttribute="height" constant="145" id="Ueg-Uw-Iku"/>
+                                    <constraint firstItem="TcE-JW-Nhn" firstAttribute="centerX" secondItem="Qun-O4-a4D" secondAttribute="centerX" id="aDc-1t-IVr"/>
+                                    <constraint firstAttribute="bottom" secondItem="Orq-KJ-Ett" secondAttribute="bottom" constant="15" id="fKa-ko-yeo"/>
+                                    <constraint firstItem="TcE-JW-Nhn" firstAttribute="top" secondItem="Qun-O4-a4D" secondAttribute="top" constant="15" id="pak-Jh-Lds"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X83-v7-fOu">
+                                <rect key="frame" x="10" y="175" width="173" height="145"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="plus-4-48.png" offImage="add-image-64.png" translatesAutoresizingMaskIntoConstraints="NO" id="AUg-hA-ArZ" customClass="RAMPaperSwitch" customModule="RAMPaperSwitch">
+                                        <rect key="frame" x="62" y="99" width="51" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="WW2-pA-ZA3"/>
+                                            <constraint firstAttribute="width" constant="49" id="lyv-PX-Egi"/>
+                                        </constraints>
+                                        <color key="onTintColor" red="0.99971717596054077" green="0.64632856845855713" blue="0.0077037597075104713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </switch>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightbulb-2-64-6.png" translatesAutoresizingMaskIntoConstraints="NO" id="rOa-ho-D8L">
+                                        <rect key="frame" x="61.5" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7XZ-9m-mZo"/>
+                                            <constraint firstAttribute="width" constant="50" id="MqD-3o-kIr"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="Cy3-WQ-eVu"/>
+                                    <constraint firstItem="rOa-ho-D8L" firstAttribute="centerX" secondItem="X83-v7-fOu" secondAttribute="centerX" id="TGA-tj-8bU"/>
+                                    <constraint firstItem="rOa-ho-D8L" firstAttribute="top" secondItem="X83-v7-fOu" secondAttribute="top" constant="15" id="dKq-2A-EuG"/>
+                                    <constraint firstItem="AUg-hA-ArZ" firstAttribute="centerX" secondItem="X83-v7-fOu" secondAttribute="centerX" id="r8E-dm-Bac"/>
+                                    <constraint firstAttribute="bottom" secondItem="AUg-hA-ArZ" secondAttribute="bottom" constant="15" id="vyI-Gh-2dr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Qh-eC-jqL">
+                                <rect key="frame" x="193" y="20" width="172.5" height="145"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="plus-4-48.png" offImage="add-image-64.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xdm-V9-fiL" customClass="RAMPaperSwitch" customModule="RAMPaperSwitch">
+                                        <rect key="frame" x="62" y="99" width="51" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="LIf-I6-hil"/>
+                                            <constraint firstAttribute="width" constant="49" id="lvU-HL-UpB"/>
+                                        </constraints>
+                                        <color key="onTintColor" red="0.88001972436904907" green="0.25008669495582581" blue="0.024883273988962173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </switch>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightbulb-2-64-6.png" translatesAutoresizingMaskIntoConstraints="NO" id="6OR-U1-Lfz">
+                                        <rect key="frame" x="61.5" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="8Dr-JZ-jrn"/>
+                                            <constraint firstAttribute="height" constant="50" id="9Gw-fb-fI3"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Xdm-V9-fiL" firstAttribute="centerX" secondItem="8Qh-eC-jqL" secondAttribute="centerX" id="5WW-g5-aEK"/>
+                                    <constraint firstItem="6OR-U1-Lfz" firstAttribute="centerX" secondItem="8Qh-eC-jqL" secondAttribute="centerX" id="7Zk-HO-8t8"/>
+                                    <constraint firstAttribute="height" constant="145" id="QK4-8A-uBD"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xdm-V9-fiL" secondAttribute="bottom" constant="15" id="UEg-Wc-MeW"/>
+                                    <constraint firstItem="6OR-U1-Lfz" firstAttribute="top" secondItem="8Qh-eC-jqL" secondAttribute="top" constant="15" id="sPz-6S-k9O"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8KI-kg-C96">
+                                <rect key="frame" x="193" y="175" width="173" height="145"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="plus-4-48.png" offImage="add-image-64.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sp2-2d-mTP" customClass="RAMPaperSwitch" customModule="RAMPaperSwitch">
+                                        <rect key="frame" x="62" y="99" width="51" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="m2w-hd-Szz"/>
+                                            <constraint firstAttribute="height" constant="31" id="rkK-7I-Ap6"/>
+                                        </constraints>
+                                        <color key="onTintColor" red="0.64997303485870361" green="0.84423607587814331" blue="0.52312701940536499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </switch>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightbulb-2-64-6.png" translatesAutoresizingMaskIntoConstraints="NO" id="RfY-Sl-YK3">
+                                        <rect key="frame" x="61.5" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="aff-hh-TQ3"/>
+                                            <constraint firstAttribute="height" constant="50" id="stA-3p-6f0"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="0rf-fJ-Z6n"/>
+                                    <constraint firstItem="RfY-Sl-YK3" firstAttribute="top" secondItem="8KI-kg-C96" secondAttribute="top" constant="15" id="G7G-nV-yQH"/>
+                                    <constraint firstItem="Sp2-2d-mTP" firstAttribute="centerX" secondItem="8KI-kg-C96" secondAttribute="centerX" id="TVi-hU-T7Z"/>
+                                    <constraint firstItem="RfY-Sl-YK3" firstAttribute="centerX" secondItem="8KI-kg-C96" secondAttribute="centerX" id="fMx-te-M8C"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sp2-2d-mTP" secondAttribute="bottom" constant="15" id="zCN-zN-Nsg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qun-O4-a4D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="1zy-EU-MN6"/>
+                            <constraint firstItem="8Qh-eC-jqL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4br-RL-vdk"/>
+                            <constraint firstItem="8KI-kg-C96" firstAttribute="height" secondItem="Qun-O4-a4D" secondAttribute="height" id="6Ux-UW-kDg"/>
+                            <constraint firstAttribute="trailing" secondItem="8KI-kg-C96" secondAttribute="trailing" constant="9" id="I4a-NK-SaC"/>
+                            <constraint firstItem="X83-v7-fOu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="PYA-Y1-CiK"/>
+                            <constraint firstItem="X83-v7-fOu" firstAttribute="height" secondItem="Qun-O4-a4D" secondAttribute="height" id="SPQ-O0-FzT"/>
+                            <constraint firstItem="8Qh-eC-jqL" firstAttribute="width" secondItem="Qun-O4-a4D" secondAttribute="width" id="Sh5-3S-4d7"/>
+                            <constraint firstItem="8KI-kg-C96" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="3/2" constant="-1.75" id="V3b-gO-NYn"/>
+                            <constraint firstItem="X83-v7-fOu" firstAttribute="top" secondItem="Qun-O4-a4D" secondAttribute="bottom" constant="10" id="XD8-Mi-hRM"/>
+                            <constraint firstItem="8KI-kg-C96" firstAttribute="leading" secondItem="X83-v7-fOu" secondAttribute="trailing" constant="10" id="ai0-n5-npG"/>
+                            <constraint firstItem="Qun-O4-a4D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bor-9T-R63"/>
+                            <constraint firstItem="8KI-kg-C96" firstAttribute="top" secondItem="8Qh-eC-jqL" secondAttribute="bottom" constant="10" id="gCy-AF-4xw"/>
+                            <constraint firstItem="8Qh-eC-jqL" firstAttribute="height" secondItem="Qun-O4-a4D" secondAttribute="height" id="h3h-UQ-yIy"/>
+                            <constraint firstItem="8Qh-eC-jqL" firstAttribute="leading" secondItem="Qun-O4-a4D" secondAttribute="trailing" constant="10" id="kYz-t3-NGu"/>
+                            <constraint firstAttribute="trailing" secondItem="8Qh-eC-jqL" secondAttribute="trailing" constant="10" id="tDS-Yr-eDe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Image" destination="TcE-JW-Nhn" id="1uo-6b-mvl"/>
+                        <outlet property="Image2" destination="6OR-U1-Lfz" id="uqL-Nn-Ivp"/>
+                        <outlet property="Image3" destination="rOa-ho-D8L" id="bNX-pI-fzc"/>
+                        <outlet property="Image4" destination="RfY-Sl-YK3" id="2pj-lx-uJ8"/>
+                        <outlet property="Led1" destination="Qun-O4-a4D" id="5Hv-9q-Z6J"/>
+                        <outlet property="Led2" destination="8Qh-eC-jqL" id="74z-6K-Bvc"/>
+                        <outlet property="Led3" destination="X83-v7-fOu" id="wdC-te-RAI"/>
+                        <outlet property="Led4" destination="8KI-kg-C96" id="jxE-ej-WPh"/>
+                        <outlet property="Switch" destination="Orq-KJ-Ett" id="ban-mD-0os"/>
+                        <outlet property="Switch2" destination="Xdm-V9-fiL" id="vzI-22-Hz9"/>
+                        <outlet property="Switch3" destination="AUg-hA-ArZ" id="WtF-1b-Pv9"/>
+                        <outlet property="Switch4" destination="Sp2-2d-mTP" id="08x-MN-1PQ"/>
+                        <outlet property="switch" destination="Orq-KJ-Ett" id="A8g-xi-yqT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add-image-64.png" width="64" height="64"/>
+        <image name="lightbulb-2-64-6.png" width="64" height="64"/>
+        <image name="plus-4-48.png" width="48" height="48"/>
+    </resources>
 </document>
