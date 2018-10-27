@@ -138,12 +138,25 @@
                                     <constraint firstAttribute="bottom" secondItem="Sp2-2d-mTP" secondAttribute="bottom" constant="15" id="zCN-zN-Nsg"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-ui-s4f">
+                                <rect key="frame" x="0.0" y="599" width="375" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="wDX-wR-SYS"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MotionDetect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K9H-2H-Mw9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Qun-O4-a4D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="1zy-EU-MN6"/>
                             <constraint firstItem="8Qh-eC-jqL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4br-RL-vdk"/>
                             <constraint firstItem="8KI-kg-C96" firstAttribute="height" secondItem="Qun-O4-a4D" secondAttribute="height" id="6Ux-UW-kDg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jCG-ui-s4f" secondAttribute="bottom" id="Cig-cC-a4e"/>
                             <constraint firstAttribute="trailing" secondItem="8KI-kg-C96" secondAttribute="trailing" constant="9" id="I4a-NK-SaC"/>
                             <constraint firstItem="X83-v7-fOu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="PYA-Y1-CiK"/>
                             <constraint firstItem="X83-v7-fOu" firstAttribute="height" secondItem="Qun-O4-a4D" secondAttribute="height" id="SPQ-O0-FzT"/>
@@ -152,10 +165,12 @@
                             <constraint firstItem="X83-v7-fOu" firstAttribute="top" secondItem="Qun-O4-a4D" secondAttribute="bottom" constant="10" id="XD8-Mi-hRM"/>
                             <constraint firstItem="8KI-kg-C96" firstAttribute="leading" secondItem="X83-v7-fOu" secondAttribute="trailing" constant="10" id="ai0-n5-npG"/>
                             <constraint firstItem="Qun-O4-a4D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bor-9T-R63"/>
+                            <constraint firstItem="jCG-ui-s4f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c2Z-0C-8PT"/>
                             <constraint firstItem="8KI-kg-C96" firstAttribute="top" secondItem="8Qh-eC-jqL" secondAttribute="bottom" constant="10" id="gCy-AF-4xw"/>
                             <constraint firstItem="8Qh-eC-jqL" firstAttribute="height" secondItem="Qun-O4-a4D" secondAttribute="height" id="h3h-UQ-yIy"/>
                             <constraint firstItem="8Qh-eC-jqL" firstAttribute="leading" secondItem="Qun-O4-a4D" secondAttribute="trailing" constant="10" id="kYz-t3-NGu"/>
                             <constraint firstAttribute="trailing" secondItem="8Qh-eC-jqL" secondAttribute="trailing" constant="10" id="tDS-Yr-eDe"/>
+                            <constraint firstAttribute="trailing" secondItem="jCG-ui-s4f" secondAttribute="trailing" id="x9i-G7-nFP"/>
                         </constraints>
                     </view>
                     <connections>

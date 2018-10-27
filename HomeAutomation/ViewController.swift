@@ -9,6 +9,7 @@
 import UIKit
 import RAMPaperSwitch
 import Firebase
+import ScrollableGraphView
 
 class ViewController: UIViewController {
     
@@ -23,6 +24,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var Led1: UIView!
     @IBOutlet weak var Led4: UIView!
     
+    @IBAction func MotionDetect(_ sender: Any) {
+        var Motion = ""
+        var rootRef = FIRDatabase.database().reference()
+        print(rootRef)
+
+        rootRef.observeSingleEvent(of: .value, with: { (snap) in
+            // Get user value
+            Motion = ((snap.value as AnyObject)["Motion"]) as! String
+            print(Motion)
+            if(Motion == "Off"){
+                rootRef.updateChildValues(["Motion": "On"])
+                let alert = UIAlertController(title: "Alert", message: "Intruder In House!!!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: {action in rootRef.updateChildValues(["Motion": "Off"])}))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else{
+                rootRef.updateChildValues(["Motion": "Off"])
+            }
+            // ...
+        })
+
+    }
     @IBOutlet weak var Image: UIImageView!
     @IBOutlet weak var Image2: UIImageView!
     @IBOutlet weak var Image3: UIImageView!
@@ -30,7 +53,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let rootRef = FIRDatabase.database().reference().child("Leds")
-         
+        let someFrame = CGRect(x: 10, y: 320, width: self.view.frame.width - 20, height: 300)
+        let graphView = ScrollableGraphView(frame: someFrame)
+        let data: [Double] = [-4, -8, 15, 16, 23, 42]
+        let labels = ["one", "two", "three", "four", "five", "six"]
+        graphView.set(data: data, withLabels: labels)
+        graphView.shouldAutomaticallyDetectRange = true
+        graphView.shouldAdaptRange = true
+        graphView.numberOfIntermediateReferenceLines = 4
+        //self.view.addSubview(graphView)
         self.Switch.animationDidStartClosure = {(onAnimation: Bool) in
             UIView.transition(with: self.Image, duration: self.Switch.duration, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
                 self.Image.image = UIImage(named: !onAnimation ? "lightbulb-2-64-3.png" : "lightbulb-2-64-6.png")
@@ -110,6 +141,7 @@ class ViewController: UIViewController {
                 self.Switch4.setOn(false, animated: true)
             }
         }
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }

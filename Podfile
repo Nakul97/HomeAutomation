@@ -9,5 +9,7 @@ target ‘HomeAutomation’ do
     pod 'NVActivityIndicatorView'
     pod 'ScrollableGraphView'
     pod 'RAMPaperSwitch'
+    pod 'ScrollableGraphView'
+    pod 'Charts'
 
 end
